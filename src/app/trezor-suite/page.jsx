@@ -24,41 +24,43 @@ function page() {
             Manage your assets in one app.
           </p>
           <div className=" flex">
-            <div className=" grid md:grid-cols-3 gap-3 py-2 ">
+            <div className=" md:flex md:flex-cols-3 md:gap-3  ">
               <div className=" ">
                 <Button>Download for desktop</Button>
               </div>
-              <div className=" ">
+              <div className="py-2 px-3 ">
                 <Button className="bg-[#e2e2e2]  text-black hover:bg-[#d6d5d5]">
                   Continue in browser
                 </Button>
               </div>
-              <div className=" ">
+              <div className="mb-10 ">
                 <OtherOptions />
               </div>
             </div>
           </div>
         </div>
         {/* ++++++++++++++++++++++++++End++++++++++++++++++++++++++++++++++++++++++++ */}
-        <div className="grid sm:grid-cols-2  bg-white my-4 px-4 rounded-xl">
-          <div className="my-5 px-0">
-            <h2 className="md:text-5xl lg:text-6xl text-3xl py-3 md:mb-4 ">
-              Coin Management
-            </h2>
-            <p className="text-xl lg:text-2xl md:text-xl text-[#0f6148] lg:mb-10 mb-5 ">
-              Connect your hardware wallet with Trezor Suite.
-            </p>
-            <p className="md:pr-16 lg:text-xl md:text-lg text-md text-[#797979]">
-              Send & receive coins, track your portfolio, trade assets or pay
-              for daily essentials directly from the app.
-            </p>
-          </div>
-          <div className="my-3 ">
-            <Image
-              src={coinSecurity}
-              alt="coin security"
-              className="rounded-xl"
-            />
+        <div className=" relative">
+          <div className="grid sm:grid-cols-2  bg-white my-4 px-4 rounded-xl">
+            <div className="my-5 px-0">
+              <h2 className="md:text-5xl lg:text-6xl text-3xl py-3 md:mb-4 ">
+                Coin Management
+              </h2>
+              <p className="text-xl lg:text-2xl md:text-xl text-[#0f6148] lg:mb-10 mb-5 ">
+                Connect your hardware wallet with Trezor Suite.
+              </p>
+              <p className="md:pr-16 lg:text-xl md:text-lg text-md text-[#797979]">
+                Send & receive coins, track your portfolio, trade assets or pay
+                for daily essentials directly from the app.
+              </p>
+            </div>
+            <div className="my-3 ">
+              <Image
+                src={coinSecurity}
+                alt="coin security"
+                className="rounded-xl"
+              />
+            </div>
           </div>
         </div>
         {/* ++++++++++++++++++++++++++End++++++++++++++++++++++++++++++++++++++++++++ */}

@@ -10,21 +10,22 @@ import AndroidIcon from "@/assets/AndroidIcon";
 import AppleIcon from "@/assets/AppleIcon";
 import Link from "next/link";
 import DownArrow from "@/assets/DownArrow";
+import UpArrow from "@/assets/UpArrow";
 
 function OtherOptions() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className=" absolute z-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center underline p-2 rounded hover:no-underline"
       >
         OtherOptions
-        <span className="mr-2">{isOpen ? "▲" : <DownArrow />}</span>
+        <span className="mr-2">{isOpen ? <UpArrow /> : <DownArrow />}</span>
       </button>
       {isOpen && (
-        <div className="mt-4 text-gray-700">
+        <div className=" flex mt-3 md:-ml-24 md:mt-8 text-gray-700">
           <div className="sm:w-[400px] w-auto rounded-lg px-3 shadow-md bg-white">
             <div className=" grid sm:grid-cols-2 gap-2 ">
               <div className="col-span-full">
