@@ -6,22 +6,17 @@ import coinSecurity from "@/assets/img/coinSecurity.jpg";
 import checkVerify from "@/assets/img/checkVerify.jpg";
 import simpleSetupUse from "@/assets/img/simpleSetupUse.jpg";
 import Image from "next/image";
-import { DownData } from "@/components/DownData";
+import DownData from "@/components/DownData";
 import OtherOptions from "@/components/OtherOptions";
 
 function page() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpand = ({ props }) => {
-    setIsExpanded(!isExpanded);
-  };
   return (
     <div className="">
       <div className="lg:px-28 lg:py-24 px-5 py-8 ">
         {/* ++++++++++++++++++++++++++Start++++++++++++++++++++++++++++++++++++++++++++ */}
         <div className="grid sm:grid-cols-2  bg-white my-4 px-4 rounded-xl"></div>
         <div>
-          <h2 className="sm:text-6xl text-2xl  py-2 font-bold lg:mt-14 mt-14 md:mt-20 ">
+          <h2 className="2xl:flex 2xl:gap-4 sm:text-6xl text-2xl  py-2 font-bold lg:mt-14 mt-14 md:mt-20 ">
             Take Control Of Your <br />
             <span className="text-[#0f6148]">Crypto In Trezor Suite</span>
           </h2>
@@ -136,61 +131,9 @@ function page() {
           </div>
         </div>
         {/* ++++++++++++++++++++++++++End++++++++++++++++++++++++++++++++++++++++++++ */}
-        {/* ++++++++++++++++++++++++++Start Maping++++++++++++++++++++++++++++++++++++++++++++ */}
-        <div className="relative overflow-hidden">
-          {DownData.map((items, index) => (
-            <div key={index} className="p-4 overflow-hidden gap-3 relative">
-              <div
-                className={`flex flex-col lg:flex-row justify-between bg-white shadow-lg rounded-2xl ${
-                  isExpanded ? "h-[500px]" : "h-64"
-                } overflow-hidden`}
-              >
-                {/* Left Section */}
-                <div
-                  className={`flex-shrink-0 rounded-2xl px-8 py-2 m-3 bg-[#eeeeee] ${
-                    isExpanded ? "w-full lg:w-[40%]" : "w-full lg:w-[20%]"
-                  }`}
-                >
-                  <div className="mt-5">{items.img}</div>
-                </div>
-
-                {/* Middle Section */}
-                <div
-                  className={`flex flex-col justify-start p-5 rounded-xl ${
-                    isExpanded ? "flex-grow" : "w-full lg:w-2/3"
-                  }`}
-                >
-                  <div
-                    className={`${
-                      isExpanded
-                        ? "w-full "
-                        : "line-clamp-3 w-full absolute top-14 "
-                    }`}
-                  >
-                    <div className="text-3xl lg:text-4xl">{items.name}</div>
-                    <div className="py-3 text-[#106148] lg:mb-32 text-lg lg:text-xl">
-                      {items.span}
-                    </div>
-                    <div className="py-3  text-[#797979] text-sm lg:text-lg">
-                      {items.paragraph}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Button Section */}
-                <div className="flex items-center absolute right-0 top-0 px-3 z-30">
-                  <div
-                    className="bg-[#eeeeee] mx-3 mt-8 p-4 rounded-full cursor-pointer"
-                    onClick={toggleExpand}
-                  >
-                    {items.button}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div>
+          <DownData />
         </div>
-        {/* ++++++++++++++++++++++++++End++++++++++++++++++++++++++++++++++++++++++++ */}
       </div>
     </div>
   );
