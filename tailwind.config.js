@@ -6,14 +6,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // screens: {
-    //   xs: "480px", // Custom small size
-    //   sm: "640px", // Default small size
-    //   md: "768px", // Default medium size
-    //   lg: "1024px", // Default large size
-    //   xl: "1280px", // Default extra-large size
-    //   "2xl": "1440px", // Custom extra-large size
-    // },
+    screens: {
+      xs: "375px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
+    },
     extend: {
       colors: {
         background: "var(--background)",

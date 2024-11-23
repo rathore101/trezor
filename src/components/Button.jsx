@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Button({ type, variant, className, id, onClick, children }) {
@@ -9,7 +10,7 @@ function Button({ type, variant, className, id, onClick, children }) {
         className={
           className
             ? `  px-5  rounded-full py-4 ${className}`
-            : "bg-[#0f6148] px-5 text-white rounded-full py-4"
+            : "bg-[#0f6148] px-5 text-white rounded-full py-4 hover:bg-[#0b3d2e]"
         }
         id={id}
         onClick={onClick}

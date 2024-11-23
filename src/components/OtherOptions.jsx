@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import WindowIcon from "@/assets/WindowIcon";
 import AppleIcomM from "@/assets/AppleIconM";
 import AppleIntel from "@/assets/AppleIntel";
@@ -11,12 +11,19 @@ import AppleIcon from "@/assets/AppleIcon";
 import Link from "next/link";
 import DownArrow from "@/assets/DownArrow";
 import UpArrow from "@/assets/UpArrow";
+import Alldata from "./Alldata";
 
 function OtherOptions() {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
+  const handleOutsideClick = (e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <div className=" absolute z-50">
+    <div className=" absolute z-10 ">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center underline p-2 rounded hover:no-underline"
@@ -25,8 +32,14 @@ function OtherOptions() {
         <span className="mr-2">{isOpen ? <UpArrow /> : <DownArrow />}</span>
       </button>
       {isOpen && (
-        <div className=" flex mt-3 md:-ml-24 md:mt-8 text-gray-700">
-          <div className="sm:w-[400px] w-auto rounded-lg px-3 shadow-md bg-white">
+        <div
+          className=" flex mt-3 md:-ml-24 md:mt-8 text-black "
+          onClick={handleOutsideClick}
+        >
+          <div
+            className="sm:w-[400px] w-auto rounded-lg px-3 shadow-md bg-white"
+            ref={modalRef}
+          >
             <div className=" grid sm:grid-cols-2 gap-2 ">
               <div className="col-span-full">
                 <h2 className="text-[#767676]  mt-3">For Window</h2>
@@ -119,6 +132,7 @@ function OtherOptions() {
                 </div>
               </Link>
             </div>
+            ;
             <div className="text-[#767676] my-4">
               <div className=" flex gap-4  my-2">
                 <h2>Version: v24.10.1</h2>
@@ -144,28 +158,17 @@ function OtherOptions() {
 
 export default OtherOptions;
 
-// "use client";
-
-// import { useState } from "react";
-// import DownArrow from "@/assets/DownArrow";
-
-// export default function ArrowToggle() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <div className="">
-//       <button
-//         onClick={() => setIsOpen(!isOpen)}
-//         className="flex items-center p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-//       >
-//         OtherOptions
-//         <span className="mr-2">{isOpen ? "▲" : <DownArrow />}</span>
-//       </button>
-//       {isOpen && (
-//         <p className="mt-4 text-gray-700">
-//           This is the text that appears when you click the arrow button.
-//         </p>
-//       )}
+// {
+//   Alldata?.optionDrop?.map((items, index) => (
+//     <div key={index} className="grid sm:grid-cols-2 gap-2">
+//       <div className="col-span-full">{items.title}</div>
+//       <div className="flex  justify-center items-center bg-[#f6f6f6] rounded-lg px-2 py-3 hover:text-[#0f6148] hover:bg-[#d6d5d5]">
+//         <Link href={items.url}>
+//           <div className="">{items.icon}</div>
+//           <div className="">{items.name}</div>
+//           <div className="text-[#767676] ">{items.paragraph}</div>
+//         </Link>
+//       </div>
 //     </div>
-//   );
+//   ));
 // }
