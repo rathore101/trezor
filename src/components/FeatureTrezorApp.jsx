@@ -4,7 +4,7 @@ import React from "react";
 import ArrowUpRight from "@/assets/ArrowUpRight";
 import CloseNavIcon from "@/assets/CloseNavIcon";
 import Link from "next/link";
-import Alldata from "./Alldata";
+import { Alldata } from "./Alldata";
 
 function FeatureTrezorApp() {
   const [isOpen, setIsOpen] = useState(false);

@@ -25,22 +25,7 @@ import LinuxArmIcon from "@/assets/LinuxArmIcon";
 import AndroidIcon from "@/assets/AndroidIcon";
 import AppleIcon from "@/assets/AppleIcon";
 
-export default {
-  // header: {
-  //   headerNav: [
-  //     {
-  //       manHeading:
-  //         "Apple Pay and Google Pay are temporarily unavailable for a few days. Please use other payment options.",
-  //       logo: [{ logo: <Logo />, url: "/" }],
-  //       headerNavbarMenu: [
-  //         { id: "3", name: "Products" },
-  //         { id: "4", name: "App" },
-  //         { id: "5", name: "Coins" },
-  //         { id: "6", name: " Learn & Support" },
-  //       ],
-  //     },
-  //   ],
-  // },
+export const Alldata = {
   footer: {
     product: [
       { id: 1, name: "Trezor Safe 3", url: "#" },

@@ -3,9 +3,10 @@ import { useState } from "react";
 import Logo from "@/assets/Logo";
 import Link from "next/link";
 import React from "react";
-import Alldata from "@/components/Alldata";
+// import Alldata from "@/components/Alldata";
 import MinusIcon from "@/assets/MinusIcon";
 import PlusIcon from "@/assets/PlusIcon";
+import { Alldata } from "./Alldata";
 
 function Footer() {
   const [isClick, setIsClick] = useState(false);

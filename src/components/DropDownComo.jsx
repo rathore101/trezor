@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import React from "react";
-import Alldata from "@/components/Alldata";
+import { Alldata } from "@/components/Alldata";
 import DownArrow from "@/assets/DownArrow";
 import UpArrow from "@/assets/UpArrow";
 
