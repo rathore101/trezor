@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className="">
       <div className="lg:p-24 md:px-5 px-2 py-8 ">
-        <ProductHover />
+        {/* <ProductHover /> */}
         {/* ++++++++++++++++++++++++++Start++++++++++++++++++++++++++++++++++++++++++++ */}
         <div className="grid sm:grid-cols-2  bg-white my-4 px-4 rounded-xl"></div>
         <div>
