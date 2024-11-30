@@ -12,7 +12,7 @@ import bestDeal from "@/assets/img/bestDeal.jpg";
 import Export from "@/assets/Export";
 import DarkMode from "@/assets/DarkMode";
 import Tor from "@/assets/Tor";
-import Bitcoin from "@/assets/Bitcoin";
+import BitcoinIcon from "@/assets/BitcoinIcon";
 import NativeSupport from "@/assets/NativeSupport";
 import Passphrase from "@/assets/Passphrase";
 import Taproot from "@/assets/Taproot";
@@ -24,8 +24,61 @@ import LinuxIcon from "@/assets/LinuxIcon";
 import LinuxArmIcon from "@/assets/LinuxArmIcon";
 import AndroidIcon from "@/assets/AndroidIcon";
 import AppleIcon from "@/assets/AppleIcon";
+import LearnBooks from "@/assets/LearnBooks";
+import Headset from "@/assets/Headset";
+import UserFour from "@/assets/UserFour";
+import NewsBlog from "@/assets/NewsBlog";
+import Toproot from "@/assets/Taproot";
+import TorNetwork from "@/assets/TorNetwork";
+import CoinControl from "@/assets/CoinControl";
+import Uniswap from "@/assets/img/Uniswap.png";
+import Chainlink from "@/assets/img/Chainlink.png";
+import OKB from "@/assets/img/OKB.png";
+import Stellar from "@/assets/img/Stellar.png";
+import Ethereum from "@/assets/img/Ethereum.png";
+import Solana from "@/assets/img/Solana.png";
+import Tether from "@/assets/img/Tether.png";
+import BNB from "@/assets/img/BNB.png";
+import USDCoin from "@/assets/img/USDCoin.png";
+import XRP from "@/assets/img/XRP.png";
+import Bitcoin from "@/assets/img/Bitcoin.png";
+import Cardano from "@/assets/img/Cardano.png";
+import Dogecoin from "@/assets/img/Bitcoin.png";
+import Polygon from "@/assets/img/Bitcoin.png";
+import BinanceUSD from "@/assets/img/Bitcoin.png";
+import ShibaInu from "@/assets/img/Bitcoin.png";
+import Avalanche from "@/assets/img/Avalanche.png";
+import Dai from "@/assets/img/Dai.png";
+import WrappedBitcoin from "@/assets/img/WrappedBitcoin.png";
+import DownArrow from "@/assets/DownArrow";
+import Logo from "@/assets/Logo";
+import ProductHover from "./ProductHover";
+import SupportHover from "./SupportHover";
+import PlusIcon from "@/assets/PlusIcon";
+import MinusIcon from "@/assets/MinusIcon";
 
 export const Alldata = {
+  header: [
+    {
+      id: 1,
+      name: "Products",
+      arrow: <DownArrow />,
+      plusIcon: <PlusIcon />,
+      minusIcon: <MinusIcon />,
+      subMenu: <ProductHover />,
+    },
+    { id: 2, name: "App" },
+    { id: 3, name: "Coins" },
+    {
+      id: 4,
+      name: "Learn & Support",
+      arrow: <DownArrow />,
+      plusIcon: <PlusIcon />,
+      minusIcon: <MinusIcon />,
+      subMenu: <SupportHover />,
+    },
+  ],
+
   footer: {
     product: [
       { id: 1, name: "Trezor Safe 3", url: "#" },
@@ -35,7 +88,11 @@ export const Alldata = {
       { id: 5, name: "Trezor Expert", url: "#" },
       { id: 6, name: "Compare wallets", url: "#" },
       { id: 7, name: "Trezor Suite", url: "#" },
-      { id: 8, name: "All products & accessories", url: "#" },
+      {
+        id: 8,
+        name: "All products & accessories",
+        url: "#",
+      },
     ],
     learn: [
       { id: 1, name: "Supported Coins", url: "#" },
@@ -178,7 +235,7 @@ export const Alldata = {
         name: "Bitcoin-only firmware",
         paragraph:
           "Focus on Bitcoin solely by installing Bitcoin-only firmware and use it easily in Trezor Suite.",
-        btn: <Bitcoin />,
+        btn: <BitcoinIcon />,
         url: "#",
       },
       {
@@ -202,7 +259,7 @@ export const Alldata = {
         name: "Buy, Sell, Exchange or Spend",
         paragraph:
           "Buy, sell, exchange, or spend using our partner Invity directly in Trezor Suite.",
-        btn: <Bitcoin />,
+        btn: <BitcoinIcon />,
         url: "#",
       },
       {
@@ -300,4 +357,66 @@ export const Alldata = {
     { title: "For Mobile", paragraph: "iOS", url: "#", icon: <AppleIcon /> },
     { paragraph: "Android", url: "#", icon: <AndroidIcon /> },
   ],
+  supportData: [
+    {
+      name: " Learn",
+      paragraph: "Get the most out of your Trezor",
+      btn: <LearnBooks />,
+    },
+    {
+      name: " Support",
+      paragraph: "Need help? We’ve got answers",
+      btn: <Headset />,
+    },
+    {
+      name: " Fourm",
+      paragraph: "Join the Trezor community",
+      btn: <UserFour />,
+    },
+    {
+      name: " Blog",
+      paragraph: "Stay updated with Trezor news",
+      btn: <NewsBlog />,
+    },
+  ],
+  securityPrivacy: [
+    {
+      name: "Tor network",
+      paragraph:
+        "Make it more difficult to trace your internet activity with Tor, an open-source software that enables anonymous communication.",
+      btn: <TorNetwork />,
+    },
+    {
+      name: "Coin control",
+      paragraph:
+        "Get more control and enhance privacy when sending funds. Manually select specific coins to use for outgoing transactions.",
+      btn: <CoinControl />,
+    },
+    {
+      name: "Taproot",
+      paragraph:
+        "Taproot enhances bitcoin safety, privacy & network efficiency.",
+      btn: <Toproot />,
+    },
+  ],
+  slider: [
+    { src: Uniswap, alt: "Uniswap" },
+    { src: Chainlink, alt: "Chainlink" },
+    { src: Stellar, alt: "Stellar" },
+    { src: Bitcoin, alt: "Bitcoin" },
+    { src: Ethereum, alt: "Ethereum" },
+    { src: Solana, alt: "Solana" },
+    { src: Tether, alt: "Tether" },
+    { src: BNB, alt: "BNB" },
+    { src: USDCoin, alt: "USDCoin" },
+    { src: XRP, alt: "XRP" },
+    { src: Avalanche, alt: "Avalanche" },
+    { src: Dai, alt: "Dai" },
+    { src: WrappedBitcoin, alt: "WrappedBitcoin" },
+  ],
 };
+// { src: Cardano, alt: "Cardano" },
+//   { src: Dogecoin, alt: "Dogecoin" },
+//   { src: Polygon, alt: "Polygon" },
+//   { src: BinanceUSD, alt: "BinanceUSD" },
+//   { src: ShibaInu, alt: "ShibaInu" },

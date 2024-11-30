@@ -8,14 +8,15 @@ import Toproot from "@/assets/Taproot";
 import Image from "next/image";
 import security from "@/assets/img/security.png";
 import FeatureTrezorApp from "./FeatureTrezorApp";
+import { Alldata } from "./Alldata";
 
 export default function SecutityPrivacyComo() {
   return (
-    <div className="py-10">
-      <div className="lg:grid lg:grid-cols-3 gap-3">
-        <div className="lg:inline-block md:flex mb-4 md:mb-0 gap-3">
-          <div className=" w-full lg:text-5xl text-3xl md:text-4xl font-medium mb-5">
-            <h2 className="w-full">
+    <div className="pt-5 pb-10">
+      <div className="xl:grid xl:grid-cols-3 gap-3">
+        <div className="xl:inline-block md:flex mb-4 md:mb-0 gap-3 px-2">
+          <div className=" w-full xl:text-5xl text-2xl  md:px-0 md:text-4xl font-medium mb-5">
+            <h2 className="w-full  text-black">
               Security & privacy your way with the Trezor Suite app
             </h2>
           </div>
@@ -26,66 +27,40 @@ export default function SecutityPrivacyComo() {
           </div>
         </div>
         <div className=" col-span-2">
-          <div className="grid gap-3 md:grid-cols-2 ">
+          <div className="grid gap-5 md:grid-cols-2  ">
             <div className="grid gap-3">
-              <div className="rounded-3xl bg-white shadow-lg p-9">
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#e5f3ed] p-3 rounded-full">
-                    <div className=" size-6 text-[#106148] ">
-                      <TorNetwork />
+              {Alldata.securityPrivacy?.map((items, index) => (
+                <div key={index} className="relative mt-5">
+                  <div className="rounded-3xl bg-white shadow-lg p-5">
+                    <div className="size-14 text-[#106148] bg-[#e5f3ed] p-2 rounded-full absolute -top-5 border-8 border-white ">
+                      {items.btn}
+                    </div>
+                    <div className="px-6">
+                      <div className="text-xl text-black mt-7">
+                        {items.name}
+                      </div>
+                      <div className="text-[#797979] mt-2">
+                        {items.paragraph}
+                      </div>
                     </div>
                   </div>
-                  <h2 className="text-2xl font-medium">Tor network</h2>
                 </div>
-                <p className="text-[#797979] mt-2">
-                  Make it more difficult to trace your internet activity with
-                  Tor, an open-source software that enables anonymous
-                  communication.
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-white shadow-lg p-9">
-                <div className="flex items-center ">
-                  <div className="bg-[#e5f3ed] p-3 rounded-full">
-                    <div className=" size-6 text-[#106148] ">
-                      <CoinControl />
-                    </div>
-                  </div>
-                  <h2 className="text-2xl font-medium">Coin control</h2>
-                </div>
-                <p className="text-[#797979] mt-2">
-                  Get more control and enhance privacy when sending funds.
-                  Manually select specific coins to use for outgoing
-                  transactions.
-                </p>
-              </div>
-              <div className="rounded-3xl bg-white shadow-lg p-9">
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#e5f3ed] p-3 rounded-full">
-                    <div className=" size-6 text-[#106148] ">
-                      <Toproot />
-                    </div>
-                  </div>
-                  <h2 className="text-2xl font-medium">Taproot</h2>
-                </div>
-                <p className="text-[#797979] mt-2">
-                  Taproot enhances bitcoin safety, privacy & network efficiency.
-                </p>
-              </div>
+              ))}
             </div>
-            <div className=" flex md:grid md:gap-3 gap-2 h-36 md:h-auto w-auto ">
-              <div className="rounded-lg  row-span-2">
+            <div className=" flex justify-between md:grid md:gap-3 gap-2 h-36 md:h-auto w-auto ">
+              <div className="rounded-lg  row-span-2 w-full">
                 <Image
                   src={security}
                   alt="Security Image"
-                  className="w-full h-full"
+                  className="w-full max-w-full h-full"
                 />
               </div>
-              <div className="rounded-3xl bg-[#0a4231] shadow-lg p-3  flex flex-col justify-between md:p-2 h-full">
-                <div className="text-end mt-3 mr-2">
+              <div className="rounded-3xl bg-[#0a4231] shadow-lg p-3 w-full ">
+                {/* flex justify-between md:inline-block md:p-2 h-full */}
+                <div className=" mt-3 flex justify-end">
                   <FeatureTrezorApp />
                 </div>
-                <h2 className=" flex justify-end items-end text-white md:text-2xl text-lg text-center lg:text-4xl lg:p-5 self-center">
+                <h2 className=" text-white md:text-2xl text-lg  lg:text-4xl h-auto xs:mr-5 flex justify-end md:justify-start mt-4 ml-2 ">
                   Explore all features
                 </h2>
               </div>

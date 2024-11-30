@@ -39,13 +39,13 @@ function FeatureTrezorApp() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-60 z-50">
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-80 z-50">
           <div
             ref={modalRef}
             className="h-auto lg:w-[60%] w-full bg-white rounded-3xl p-2 md:p-6"
           >
             <div className="flex relative items-center justify-between gap-6 p-6">
-              <h2 className="text-2xl font-medium md:text-5xl md:text-center text-start">
+              <h2 className="text-2xl font-medium md:text-5xl md:text-center text-start text-black">
                 Features of Trezor Suite app
               </h2>
               <button
@@ -63,13 +63,13 @@ function FeatureTrezorApp() {
                     className="border-2 border-[#efefef] rounded-xl p-3"
                   >
                     <Link href={items.url}>
-                      <div className="rounded-full flex items-center gap-5 py-3">
+                      <div className="rounded-full flex items-center gap-3 md:gap-5 py-3">
                         <div className="bg-[#e5f3ed] text-[#106148] p-3 rounded-full z-50 size-12">
                           {items.btn}
                         </div>
-                        <div className="text-2xl">{items.name}</div>
+                        <div className="text-2xl text-black">{items.name}</div>
                       </div>
-                      <div className="text-sm text-[#797979]">
+                      <div className="text-sm text-[#797979] ml-[60px] mr-5">
                         {items.paragraph}
                       </div>
                     </Link>

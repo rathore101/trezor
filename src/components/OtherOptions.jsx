@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import WindowIcon from "@/assets/WindowIcon";
 import AppleIcomM from "@/assets/AppleIconM";
 import AppleIntel from "@/assets/AppleIntel";
@@ -21,15 +21,22 @@ function OtherOptions() {
       setIsOpen(false);
     }
   };
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+  }, [isOpen]);
 
   return (
-    <div className=" absolute z-10 ">
+    <div className=" absolute z-20 " ref={modalRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center underline p-2 rounded hover:no-underline"
       >
         OtherOptions
-        <span className="mr-2">{isOpen ? <UpArrow /> : <DownArrow />}</span>
+        <span className="ml-1">{isOpen ? <UpArrow /> : <DownArrow />}</span>
       </button>
       {isOpen && (
         <div

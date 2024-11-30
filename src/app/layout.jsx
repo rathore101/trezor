@@ -1,7 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,18 +13,14 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "trezor App",
-  description: "Generated trezor app",
+  title: "trezor",
+  description: "this is best trezor website",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#f6f6f6]">
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className="bg-[#f6f6f6]">{children}</body>
     </html>
   );
 }
