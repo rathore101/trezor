@@ -1,10 +1,6 @@
 import React from "react";
 import Button from "./Button";
 import Link from "next/link";
-import TorNetwork from "@/assets/TorNetwork";
-import CoinControl from "@/assets/CoinControl";
-import Toproot from "@/assets/Taproot";
-// import ArrowUpRight from "@/assets/ArrowUpRight";
 import Image from "next/image";
 import security from "@/assets/img/security.png";
 import FeatureTrezorApp from "./FeatureTrezorApp";
@@ -16,7 +12,7 @@ export default function SecutityPrivacyComo() {
       <div className="xl:grid xl:grid-cols-3 gap-3">
         <div className="xl:inline-block md:flex mb-4 md:mt-10 md:mb-0 gap-3 px-2">
           <div className=" w-full xl:text-5xl text-2xl md:px-0 md:text-4xl font-medium mb-5">
-            <h2 className="w-full font-semibold text-black">
+            <h2 className="w-full font-medium text-black">
               Security & privacy your way with the Trezor Suite app
             </h2>
           </div>
