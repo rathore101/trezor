@@ -6,6 +6,7 @@ const SvgIcon = (props) => (
     className="h-6 w-6 text-gray700"
     data-testid="@icon/Headset"
     viewBox="0 0 24 24"
+    props={props}
   >
     <path
       fill="currentColor"

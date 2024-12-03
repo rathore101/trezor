@@ -3,11 +3,12 @@ import * as React from "react";
 const SvgIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
+    width="22"
+    height="22"
     fill="currentColor"
     stroke="currentColor"
     strokeWidth="0"
+    props={props}
     viewBox="0 0 24 24"
   >
     <path

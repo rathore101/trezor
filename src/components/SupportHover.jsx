@@ -21,14 +21,14 @@ function SupportHover() {
   }, []);
   return (
     <div
-      className={`z-50 md:fixed inset-0 md:flex justify-center items-start pb-6 lg:px-24 lg:mt-20 md:mt-20 md:px-5 px-0 `}
+      className={`z-50  md:fixed inset-0 md:flex justify-center items-start pb-6 lg:px-24 md:h-1 lg:mt-20 md:mt-20 md:px-5 px-0 `}
     >
-      <div
-        className={` bg-transprent pt-10 md:mt-2 -mt-8  ${
-          scrolled ? "md:-mt-[39px]" : "top-0"
-        }`}
-      >
-        <div className={`bg-white rounded-2xl  `}>
+      <div className={`bg-transparent md:mt-2 pt-10`}>
+        <div
+          className={`bg-transparent rounded-2xl  ${
+            scrolled ? "pt-10 -mt-20 z-20" : "top-0"
+          } `}
+        >
           <div
             className={` grid lg:grid-cols-3 md:grid-cols-2 bg-white rounded-2xl shadow-xl p-1 md:p-4 z-50 w-auto md:h-auto `}
           >

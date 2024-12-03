@@ -30,7 +30,7 @@ function OtherOptions() {
   }, [isOpen]);
 
   return (
-    <div className=" absolute z-20 " ref={modalRef}>
+    <div className=" absolute z-30 " ref={modalRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center underline p-2 rounded hover:no-underline"
@@ -44,7 +44,7 @@ function OtherOptions() {
           onClick={handleOutsideClick}
         >
           <div
-            className="sm:w-[400px] w-auto rounded-lg px-3 shadow-md bg-white"
+            className="sm:w-[360px] md:sm:w-[400px] w-auto rounded-lg px-3 shadow-md bg-white"
             ref={modalRef}
           >
             <div className=" grid sm:grid-cols-2 gap-2 ">
@@ -139,7 +139,7 @@ function OtherOptions() {
                 </div>
               </Link>
             </div>
-            ;
+
             <div className="text-[#767676] my-4">
               <div className=" flex gap-4  my-2">
                 <h2>Version: v24.10.1</h2>

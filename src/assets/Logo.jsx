@@ -6,6 +6,7 @@ const SvgIcon = (props) => (
     className="h-6 w-auto "
     data-testid="@icon/TrezorLogo"
     viewBox="0 0 161.768 40.771"
+    props={props}
   >
     <path
       fill="currentColor"

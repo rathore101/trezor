@@ -9,6 +9,7 @@ const SvgIcon = (props) => (
     stroke="currentColor"
     strokeWidth="0"
     viewBox="0 0 16 16"
+    props={props}
   >
     <path
       stroke="none"

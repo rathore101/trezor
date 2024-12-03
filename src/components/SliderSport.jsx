@@ -14,11 +14,14 @@ const IconSlider = () => {
         spaceBetween={20}
         speed={0.1}
         breakpoints={{
+          244: {
+            slidesPerView: 4,
+          },
           320: {
             slidesPerView: 4,
           },
           768: {
-            slidesPerView: 6,
+            slidesPerView: 7,
           },
           1024: {
             slidesPerView: 9,
@@ -30,7 +33,7 @@ const IconSlider = () => {
             <Image
               src={item.src}
               alt={item.alt}
-              className="inline-block mx-2 size-16 rounded-full"
+              className="inline-block mx-2 os:size-10 xs:size-12 md:size-16 rounded-full"
             />
           </SwiperSlide>
         ))}

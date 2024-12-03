@@ -18,23 +18,25 @@ function Footer() {
   };
 
   return (
-    <div className="bg-[#171717] rounded-t-2xl text-white px-5 py-10 lg:p-0">
-      <div className="lg:px-32 lg:py-14">
-        <div className="lg:flex lg:grid-cols-4 justify-between gap-10">
-          <div className="mb-10 lg:mb-0">
-            <div className="mb-5 w-28 text-white">
+    <div className="bg-[#171717] rounded-t-2xl text-white px-5 py-10 xl:p-0">
+      <div className="xl:pr-52 xl:pl-44 xl:py-14">
+        <div className="xl:flex xl:grid-cols-4 justify-between gap-0">
+          <div className="mb-10 xl:mb-0">
+            <div className="mb-5 w-44 text-white">
               <Logo />
             </div>
-            <p className="">a part of SatoshiLabs Group</p>
+            <p className="text-sm text-[#dddcdc]">
+              a part of SatoshiLabs Group
+            </p>
           </div>
           {/* ++++++++++++++++++++++++++++Product++++++++++++++++++++++++++++++++++++++++++ */}
-          <ul className="lg:border-none border-b border-b-[#797979]">
+          <ul className="xl:border-none border-b border-b-[#797979]">
             <div
-              className="lg:text-sm text-2xl my-4 lg:mb-4 flex justify-between"
+              className="xl:text-sm text-2xl md:text-3xl my-4 xl:mb-4 flex justify-between"
               onClick={() => toggleSection("product")}
             >
               Products
-              <div className="text-[#797979] lg:hidden">
+              <div className="text-[#797979] xl:hidden">
                 {isClick["product"] ? <MinusIcon /> : <PlusIcon />}
               </div>
             </div>
@@ -42,7 +44,7 @@ function Footer() {
             {Alldata.footer.product?.map((item, index) => (
               <li
                 key={index}
-                className={`${isClick["product"] ? "" : "hidden"} lg:block`}
+                className={`${isClick["product"] ? "" : "hidden"} xl:block`}
               >
                 <Link href={item.url}>
                   <div className="py-2  hover:text-[#797979]">{item.name}</div>
@@ -50,21 +52,33 @@ function Footer() {
               </li>
             ))}
           </ul>
+          {/* ++++++++++++++++++++++++++++App++++++++++++++++++++++++++++++++++++++++++ */}
+          <ul className="xl:border-none border-b border-b-[#797979] xl:hidden">
+            <div className="xl:text-sm text-2xl md:text-3xl my-4 xl:mb-4 flex justify-between">
+              App
+            </div>
+          </ul>
+          {/* ++++++++++++++++++++++++++++Coins++++++++++++++++++++++++++++++++++++++++++ */}
+          <ul className="xl:border-none border-b border-b-[#797979] xl:hidden">
+            <div className="xl:text-sm text-2xl md:text-3xl my-4 xl:mb-4 flex justify-between">
+              Coins
+            </div>
+          </ul>
           {/* ++++++++++++++++++++++++++++Learn++++++++++++++++++++++++++++++++++++++++++ */}
-          <ul className="lg:border-none border-b border-b-[#797979]">
+          <ul className="xl:border-none border-b border-b-[#797979]">
             <div
-              className="lg:text-sm text-2xl my-4 flex justify-between"
+              className="xl:text-sm text-2xl md:text-3xl my-4 flex justify-between"
               onClick={() => toggleSection("learn")}
             >
               Learn
-              <div className="text-[#797979] lg:hidden">
+              <div className="text-[#797979] xl:hidden">
                 {isClick["learn"] ? <MinusIcon /> : <PlusIcon />}
               </div>
             </div>
             {Alldata.footer.learn?.map((item, index) => (
               <li
                 key={index}
-                className={`${isClick["learn"] ? "" : "hidden"} lg:block`}
+                className={`${isClick["learn"] ? "" : "hidden"} xl:block`}
               >
                 <Link href={item.url}>
                   <div className="py-2 hover:text-[#797979]">{item.name}</div>
@@ -73,20 +87,20 @@ function Footer() {
             ))}
           </ul>
           {/* ++++++++++++++++++++++++++++Other++++++++++++++++++++++++++++++++++++++++++ */}
-          <ul className="lg:border-none border-b border-b-[#797979] mb-14 lg:mb-0">
+          <ul className="xl:border-none border-b border-b-[#797979] mb-14 xl:mb-0">
             <div
-              className="lg:text-sm text-2xl my-4 flex justify-between"
+              className="xl:text-sm text-2xl md:text-3xl my-4 flex justify-between"
               onClick={() => toggleSection("other")}
             >
               Other
-              <div className="text-[#797979] lg:hidden">
+              <div className="text-[#797979] xl:hidden">
                 {isClick["other"] ? <MinusIcon /> : <PlusIcon />}
               </div>
             </div>
             {Alldata.footer.other?.map((item, index) => (
               <li
                 key={index}
-                className={`${isClick["other"] ? "" : "hidden"} lg:block`}
+                className={`${isClick["other"] ? "" : "hidden"} xl:block`}
               >
                 <Link href={item.url}>
                   <div className="py-2 hover:text-[#797979]">{item.name}</div>
@@ -96,7 +110,7 @@ function Footer() {
           </ul>
           {/* ++++++++++++++++++++++++++++Icons++++++++++++++++++++++++++++++++++++++++++ */}
         </div>
-        <div className="flex flex-wrap justify-center lg:justify-start space-x-4 lg:py-4 mb-6 lg:mb-0">
+        <div className="flex flex-wrap justify-center xl:justify-start space-x-4 xl:py-4 mb-6 xl:mb-0">
           {Alldata?.FooterIcons?.Icons?.map((item) => (
             <div key={item.id} className="">
               <div className=" size-7">
@@ -107,11 +121,18 @@ function Footer() {
         </div>
       </div>
       <div>
-        <div className="lg:flex lg:justify-between lg:items-center lg:py-4 lg:px-10 lg:bg-[#1f1f1f]">
+        <div className="xl:flex xl:justify-between xl:items-center xl:py-4 xl:px-10 xl:bg-[#1f1f1f]">
           <p className="text-sm text-center  text-white/70">
             Copyright belongs to Trezor company s.r.o. All rights reserved.
           </p>
-          <span className="mr-24 pr-10 lg:block hidden">Cookies</span>
+          <div className=" cursor-pointer xl:block hidden">
+            <span className=" flex mr-24 gap-2 pr-10">
+              Cookies{" "}
+              <div className="text-[#797979]">
+                <PlusIcon />
+              </div>
+            </span>
+          </div>
         </div>
       </div>
     </div>

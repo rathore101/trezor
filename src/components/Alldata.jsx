@@ -43,11 +43,12 @@ import USDCoin from "@/assets/img/USDCoin.png";
 import XRP from "@/assets/img/XRP.png";
 import Bitcoin from "@/assets/img/Bitcoin.png";
 import Cardano from "@/assets/img/Cardano.png";
-import Dogecoin from "@/assets/img/Bitcoin.png";
-import Polygon from "@/assets/img/Bitcoin.png";
-import BinanceUSD from "@/assets/img/Bitcoin.png";
-import ShibaInu from "@/assets/img/Bitcoin.png";
+import Dogecoin from "@/assets/img/Dogecoin.png";
+import Polygon from "@/assets/img/Polygon.png";
+import BinanceUSD from "@/assets/img/BinanceUSD.png";
+import ShibaInuimg from "@/assets/img/ShibaInuimg.png";
 import Avalanche from "@/assets/img/Avalanche.png";
+import Litecoin from "@/assets/img/Litecoin.png";
 import Dai from "@/assets/img/Dai.png";
 import WrappedBitcoin from "@/assets/img/WrappedBitcoin.png";
 import DownArrow from "@/assets/DownArrow";
@@ -56,6 +57,8 @@ import ProductHover from "./ProductHover";
 import SupportHover from "./SupportHover";
 import PlusIcon from "@/assets/PlusIcon";
 import MinusIcon from "@/assets/MinusIcon";
+import Youtube from "@/assets/Youtube";
+import Spotify from "@/assets/Spotify";
 
 export const Alldata = {
   header: [
@@ -121,6 +124,8 @@ export const Alldata = {
       { id: 3, btn: <InstagramIcons />, url: "#" },
       { id: 4, btn: <FacebookIcons />, url: "#" },
       { id: 5, btn: <TiktokIcon />, url: "#" },
+      { id: 6, btn: <Youtube />, url: "#" },
+      { id: 7, btn: <Spotify />, url: "#" },
     ],
   },
   DropDownData: {
@@ -401,6 +406,7 @@ export const Alldata = {
   ],
   slider: [
     { src: Uniswap, alt: "Uniswap" },
+    { src: OKB, alt: "OKB" },
     { src: Chainlink, alt: "Chainlink" },
     { src: Stellar, alt: "Stellar" },
     { src: Bitcoin, alt: "Bitcoin" },
@@ -410,13 +416,15 @@ export const Alldata = {
     { src: BNB, alt: "BNB" },
     { src: USDCoin, alt: "USDCoin" },
     { src: XRP, alt: "XRP" },
+    { src: Cardano, alt: "Cardano" },
+    { src: Dogecoin, alt: "Dogecoin" },
+    { src: Dai, alt: "Dai" },
+    { src: Polygon, alt: "Polygon" },
+    { src: Litecoin, alt: "Litecoin" },
+    { src: BinanceUSD, alt: "BinanceUSD" },
+    { src: ShibaInuimg, alt: "ShibaInuimg" },
     { src: Avalanche, alt: "Avalanche" },
     { src: Dai, alt: "Dai" },
     { src: WrappedBitcoin, alt: "WrappedBitcoin" },
   ],
 };
-// { src: Cardano, alt: "Cardano" },
-//   { src: Dogecoin, alt: "Dogecoin" },
-//   { src: Polygon, alt: "Polygon" },
-//   { src: BinanceUSD, alt: "BinanceUSD" },
-//   { src: ShibaInu, alt: "ShibaInu" },

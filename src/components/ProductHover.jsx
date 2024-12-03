@@ -27,12 +27,14 @@ function ProductHover() {
     window.addEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="z-50 pb-5 md:fixed lg:px-24 lg:mt-28 md:mt-28 md:px-5  inset-0">
-      <div className={` bg-transprent md:pt-10 md:-mt-7 `}>
+    <div className="z-50 pb-5 md:fixed lg:px-24 lg:mt-28 md:mt-28 md:px-5 md:h-1 w-auto inset-0">
+      <div
+        className={` bg-transparent md:pt-10 md:-mt-7   ${
+          scrolled ? "  pt-12 xl:-mt-16" : "top-0"
+        } `}
+      >
         <div
-          className={`xl:grid xl:grid-cols-3 shadow-xl rounded-b-xl bg-white p-2 md:p-5 rounded-2xl   ${
-            scrolled ? "md:-mt-10" : "top-0"
-          }`}
+          className={`xl:grid xl:grid-cols-3 shadow-xl rounded-b-xl bg-white p-2 md:p-5  rounded-2xl `}
         >
           <div className="bg-[#efefef] rounded-xl p-4 md:flex w-full md:col-span-2 ">
             <div className="md:border-r border-gray-600 md:pr-8">
@@ -83,38 +85,44 @@ function ProductHover() {
                 </Link>
               </div>
             </div>
-            <div className="px-5 grid grid-cols-2 xl:flex justify-between items-center mt-2 md:mt-0 gap-5">
-              <div className="flex flex-col items-center text-center">
-                <Link href="#">
-                  <Image
-                    src={ts5}
-                    alt="Trezor Safe 5 image"
-                    className="size-24 xl:size-28"
-                  />
-                  <h2 className="mt-2 text-sm text-gray-600">Trezor Safe 5</h2>
-                </Link>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Link href="#">
-                  <Image
-                    src={ts3}
-                    alt="Trezor Safe 3 image"
-                    className="size-24 xl:size-28"
-                  />
-                  <h2 className="mt-2 text-sm text-gray-600">Trezor Safe 3</h2>
-                </Link>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <Link href="#">
-                  <Image
-                    src={tOne}
-                    alt="Trezor Model One image"
-                    className="size-24 xl:size-28"
-                  />
-                  <h2 className="mt-2 text-sm text-gray-600">
-                    Trezor Model One
-                  </h2>
-                </Link>
+            <div className=" flex justify-between items-center">
+              <div className="px-5 grid grid-cols-2 xl:flex justify-between items-center mt-2 md:mt-0 gap-5">
+                <div className="text-center">
+                  <Link href="#">
+                    <Image
+                      src={ts5}
+                      alt="Trezor Safe 5 image"
+                      className="size-24 xl:size-28"
+                    />
+                    <h2 className="mt-2 text-sm text-gray-600">
+                      Trezor Safe 5
+                    </h2>
+                  </Link>
+                </div>
+                <div className="text-center">
+                  <Link href="#">
+                    <Image
+                      src={ts3}
+                      alt="Trezor Safe 3 image"
+                      className="size-24 xl:size-28"
+                    />
+                    <h2 className="mt-2 text-sm text-gray-600">
+                      Trezor Safe 3
+                    </h2>
+                  </Link>
+                </div>
+                <div className="text-center">
+                  <Link href="#">
+                    <Image
+                      src={tOne}
+                      alt="Trezor Model One image"
+                      className="size-24 xl:size-28"
+                    />
+                    <h2 className="mt-2 text-sm text-gray-600">
+                      Trezor Model One
+                    </h2>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

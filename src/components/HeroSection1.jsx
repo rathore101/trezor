@@ -5,15 +5,15 @@ import Button from "@/components/Button";
 
 function HeroSection1() {
   return (
-    <div>
-      <h2 className=" 2xl:gap-4 sm:text-6xl text-3xl  py-2 lg:mt-14 mt-14 md:mt-20 text-black ">
+    <div className="">
+      <h2 className=" 2xl:gap-4 sm:text-4xl xl:text-6xl text-3xl md:mt-20 lg:mt-24 py-2 mt-5 xl:mt-0 text-black ">
         Take Control Of Your <br />
         <span className="text-[#0f6148]">Crypto In Trezor Suite</span>
       </h2>
-      <p className="font-abc text-[#797979] lg:text-xl md:text-lg text-md py-3">
+      <p className="font-abc text-[#797979] xl:text-xl md:text-xl text-md py-3">
         Manage your assets in one app.
       </p>
-      <div className="mt-2 flex">
+      <div className="my-2 flex">
         <div className="md:items-center md:flex md:flex-cols-3 md:gap-3  ">
           <div className=" hidden md:block">
             <Button>

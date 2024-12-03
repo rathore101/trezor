@@ -7,6 +7,7 @@ const SvgIcon = (props) => (
     height={30}
     data-testid="@icon/TrezorDevices"
     viewBox="0 0 24 24"
+    props={props}
   >
     <path
       fill="currentColor"

@@ -12,9 +12,10 @@ import PlusIcon from "@/assets/PlusIcon";
 import MinusIcon from "@/assets/MinusIcon";
 import ProductHover from "./ProductHover";
 import SupportHover from "./SupportHover";
+import Country from "./Country";
+import Cart from "./Cart";
 
 function Header() {
-  const [hoveredItem, setHoveredItem] = useState(null);
   const [isCloseOpen, setIsCloseOpen] = useState(false);
   const toggle = () => setIsCloseOpen(!isCloseOpen);
   const modalRef = useRef(null);
@@ -35,7 +36,6 @@ function Header() {
   const [isOpenSubNav, setIsOpenSubNav] = useState({});
   const toggleSubNav = (section) => {
     setIsOpenSubNav((prev) => ({
-      ...prev,
       [section]: !prev[section],
     }));
   };
@@ -48,12 +48,12 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div>
-      {(isCloseOpen || hoveredItem) && (
+    <div className={` `}>
+      {isCloseOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-40"></div>
       )}
       <div className="md:block hidden">
-        <div className="bg-[#00854d] text-white flex justify-center items-center py-2">
+        <div className="bg-[#00854d] text-white flex justify-center items-center py-1">
           <h1>
             Black Friday is live!&nbsp;
             <Link href="#" className="underline hover:no-underline">
@@ -63,49 +63,42 @@ function Header() {
         </div>
       </div>
       <main
-        className={`flex h-14 md:h-16 gap-2 md:px-2 px-2 w-full mt-2 fixed z-50 ${
-          scrolled ? "top-1" : "md:top-10"
-        }`}
+        className={`flex h-14 md:h-16 gap-2 xl:px-40 md:px-4 px-2 w-full mt-0 fixed z-50 ${
+          scrolled ? "top-2" : "md:top-10"
+        } `}
         ref={modalRef}
       >
-        <nav className=" flex justify-between items-center rounded-full bg-white shadow-lg w-full px-3">
+        <nav className=" lg:w-[83%] xl:w-[88%] 2xl:w-[85%] flex justify-between items-center rounded-full bg-white shadow-lg w-full px-5">
           {/* Logo */}
           <section className=" w-24 text-black">
-            <Logo />
+            <Link href="/">
+              <Logo />
+            </Link>
           </section>
-          {/* NavLink */}
           <section className="">
-            <ul>
-              <div className="flex items-center md:gap-10 transition-all ">
-                {Alldata?.header.map((items) => (
-                  <div
-                    className=" relative hidden md:block "
-                    key={items.id}
-                    onMouseEnter={() => setHoveredItem(items.id)}
-                    onMouseLeave={() => setHoveredItem(null)}
-                    onClick={toggleSubNav}
+            <div className="flex items-center md:gap-10 transition-all ">
+              {Alldata?.header.map((items) => (
+                <div className=" relative hidden md:block " key={items.id}>
+                  <section
+                    className={`md:flex items-center justify-between gap-1 cursor-pointer group transition-all text-[#797979]`}
                   >
-                    <section
-                      className={`md:flex items-center justify-between gap-1 cursor-pointer group transition-all text-[#797979]`}
-                    >
-                      <div className="flex items-center group-hover:text-[#3d3b3b] transition-all ">
-                        {items.name}
-                      </div>
-                      {items.arrow && (
+                    <div className="flex items-center group-hover:text-[#3d3b3b] transition-all ">
+                      {items.name}
+                    </div>
+                    {items.arrow && (
+                      <div>
                         <div className="group-hover:text-[#3d3b3b] transition-all rotate-0 group-hover:rotate-180 hidden md:block">
                           {items.arrow}
                         </div>
-                      )}
-                    </section>
-                    {hoveredItem === items.id && items.subMenu && (
-                      <div className="absolute left-0 top-full ">
-                        {items.subMenu}
+                        <div className=" hidden group-hover:block">
+                          {items.subMenu}
+                        </div>
                       </div>
                     )}
-                  </div>
-                ))}
-              </div>
-            </ul>
+                  </section>
+                </div>
+              ))}
+            </div>
           </section>
           {/* Mobile screen */}
 
@@ -114,27 +107,32 @@ function Header() {
               {isCloseOpen ? <CloseNavIcon /> : <MenuOutline />}
             </div>
             <ul
-              className={`fixed mt-5 left-0 w-full bg-white shadow rounded-2xl p-3 overflow-hidden overflow-y-scroll h-[350px] ${
+              className={`fixed mt-5 left-0 w-full bg-white shadow rounded-2xl p-3  ${
                 isCloseOpen ? "block" : "hidden"
+              } ${
+                isOpenSubNav
+                  ? "overflow-hidden overflow-y-scroll h-[400px]"
+                  : "overflow-hidden overflow-y-scroll h-[400px]"
               }`}
             >
               <li
-                className=" relative flex justify-between items-center py-2 text-gray-500"
+                className=" relative flex justify-between items-center py-4 text-gray-500"
                 onClick={() => toggleSubNav("product")}
               >
-                Products{isOpenSubNav["product"] ? <MinusIcon /> : <PlusIcon />}
+                Products
+                {isOpenSubNav["product"] ? <MinusIcon /> : <PlusIcon />}
               </li>
               <div className="  border-b-2  border-gray-200">
                 {isOpenSubNav["product"] ? <ProductHover /> : null}
               </div>
-              <li className=" flex justify-between items-center py-2  border-b-2 text-gray-500 border-gray-200">
+              <li className=" flex justify-between items-center py-4  border-b-2 text-gray-500 border-gray-200">
                 App
               </li>
-              <li className=" flex justify-between items-center py-2  border-b-2 text-gray-500 border-gray-200">
+              <li className=" flex justify-between items-center py-4  border-b-2 text-gray-500 border-gray-200">
                 Coins
               </li>
               <li
-                className=" flex justify-between items-center py-2 text-gray-500"
+                className=" flex justify-between items-center py-4 text-gray-500"
                 onClick={() => toggleSubNav("support")}
               >
                 Learn & Support
@@ -144,22 +142,20 @@ function Header() {
                 {isOpenSubNav["support"] ? <SupportHover /> : null}
               </div>
               <div className="py-2 border-b-2 border-gray-200 text-gray-500">
-                <div className="  py-2 flex items-center gap-1">
-                  <p>Cart</p>
-                  <span className="bg-[#efefef] rounded-full p-1 flex items-center justify-center size-7">
-                    0
+                {/* <div>{<Country />}</div> */}
+                <div className="  py-4 flex items-center gap-1">
+                  <span className=" rounded-full px-9 flex items-center justify-center size-7">
+                    <Cart />
                   </span>
                 </div>
               </div>
             </ul>
           </div>
-
-          {/* Country cart */}
-          <div className=" hidden md:block">
+          <div className="  hidden md:block">
             <div className="pl-2 flex items-center gap-1">
-              <p>Cart</p>
-              <span className="bg-[#efefef] rounded-full p-1 flex items-center justify-center size-7">
-                0
+              {/* <div>{<Country />}</div> */}
+              <span>
+                <Cart />
               </span>
             </div>
           </div>
@@ -176,26 +172,3 @@ function Header() {
 }
 
 export default Header;
-
-{
-  /* <div className="md:hidden">
-  <div onClick={toggle} className="cursor-pointer">
-    {isCloseOpen ? <CloseNavIcon /> : <MenuOutline />}
-  </div>
-
-  <ul
-    className={`relative ${
-      isCloseOpen ? "block" : "hidden"
-    } bg-red-500 p-4 w-full`}
-  >
-    {Alldata?.header.map((items) => (
-      <li key={items.id} className="text-white mb-2">
-        {" "}
-        <nav className="p-2">
-          <div className="">{items.name}</div>
-        </nav>
-      </li>
-    ))}
-  </ul>
-</div>; */
-}
