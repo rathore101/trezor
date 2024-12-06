@@ -10,7 +10,7 @@ function HeroSection1() {
         Take Control Of Your <br />
         <span className="text-[#0f6148]">Crypto In Trezor Suite</span>
       </h2>
-      <p className="font-abc text-[#797979] xl:text-xl md:text-xl text-md py-3">
+      <p className="font-abc text-[#545c6a] xl:text-xl md:text-xl text-md py-3">
         Manage your assets in one app.
       </p>
       <div className="my-2 flex">

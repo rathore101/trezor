@@ -37,35 +37,41 @@ function DropDownComo() {
             <div
               className={`col-span-3 relative ${
                 isOpen[item.id]
-                  ? "grid col-start-2 md:px-3 md: "
-                  : "md:pl-7 col-span-4 md:col-span-3 overflow-hidden "
+                  ? "grid col-start-2 md:px-3 "
+                  : "md:pl-7 col-span-4 md:col-span-3 "
               }`}
             >
               <div className=" ">
-                <div className="flex h-24 items-center">
-                  <div className="md:hidden  w-24 rounded-2xl overflow-hidden flex-shrink-0">
-                    {item.img}
+                <div className="flex xs:h-20 items-center">
+                  <div className=" mt-2 xs:mt-8">
+                    <div className=" h-28 bg-[#f6f6f6] p-2 md:hidden overflow-hidden w-24 rounded-xl flex-shrink-0">
+                      {item.img}
+                    </div>
                   </div>
-                  <div className="text-sm xs:text-xl md:text-3xl lg:text-4xl md:mt-5 absolute top-0 pl-[105px] md:pl-0 xs:pr-12 pr-10 md:pr-10">
-                    <div className="text-black  font-sans pt-1">
+                  <div className="md:text-3xl lg:text-4xl md:mt-5 absolute top-0 pl-[105px] md:pl-0 xs:pr-8 pr-10 md:pr-10">
+                    <div className="text-black md:text-4xl text-md sm:text-2xl xx:text-3xl font-sans pt-1">
                       {item.name}
                     </div>
-                    <div className="text-[#106148] pt-1 text-xs xs:text-sm md:text-md font-medium md:py-1">
-                      {item.span}
+                    <div className="text-[#106148] pt-1 text-[12px] xs:text-sm md:text-md md:text-lg font-medium md:py-1  ">
+                      {isOpen[item.id] ? (
+                        <div className=""> {item.span}</div>
+                      ) : (
+                        <div className="line-clamp-1"> {item.span}</div>
+                      )}
                     </div>
                   </div>
                 </div>
                 <div
                   className={`text-lg text-[#797979] transform md:transition-none transition-all duration-1000 md:duration-400 ${
                     isOpen[item.id]
-                      ? " md:mt-16 lg:mt-24 xl:mt-28 "
-                      : "opacity-0 -translate-y-10 h-7"
+                      ? " md:mt-16 lg:mt-24 xl:mt-28 mt-12 "
+                      : "opacity-0 translate-y-1 h-5"
                   }`}
                 >
-                  <div className="pt-8 mb-3 text-sm md:text-md font-medium ">
+                  <div className=" md:pt-10 text-sm md:text-lg md:text-md font-medium md:pr-16 ">
                     {item.paragraph}
                   </div>
-                  <div className="md:hidden rounded-2xl overflow-hidden transition-all duration-500 ">
+                  <div className="md:hidden  rounded-2xl overflow-hidden transition-all duration-500 ">
                     {item.img}
                   </div>
                 </div>

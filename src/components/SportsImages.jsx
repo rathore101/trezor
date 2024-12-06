@@ -7,7 +7,7 @@ import SliderSport from "@/components/SliderSport";
 
 function SportsImages() {
   return (
-    <div className=" px-3 md:px-1  overflow-hidden">
+    <div className=" md:pt-16 px-3 md:px-1  overflow-hidden">
       <SliderSport />
       <div className="flex justify-center items-center my-8 md:my-16 ">
         <div className="">
@@ -21,14 +21,14 @@ function SportsImages() {
           </div>
         </div>
       </div>
-      <div className=" relative mb-10">
+      <div className=" relative">
         <Image
           src={banner1}
           alt="banner"
-          className=" rounded-2xl w-full h-[50vh] md:h-full"
+          className=" rounded-2xl w-full h-[55vh] sm:h-[50vh] md:h-full"
         />
-        <div className=" absolute inset-0 flex flex-col justify-center items-center top-64 md:top-52 lg:top-[275px] xl:top-80 xs:top-[215px] px-1">
-          <h2 className=" text-center text-2xl md:text-4xl lg:text-6xl xl:text-7xl py-3 xl:py-5 text-black">
+        <div className=" absolute inset-0 flex flex-col justify-center items-center top-64 md:top-52 lg:top-[275px] xl:top-80 sm:top-56 xs:top-[250px] px-1">
+          <h2 className=" text-center text-2xl md:text-4xl lg:text-6xl xl:text-7xl sm:py-3 xl:py-5 text-black">
             Take control of your future
           </h2>
           <Button className="bg-black font-bold hover:bg-black/80 text-white">

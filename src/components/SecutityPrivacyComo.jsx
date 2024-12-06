@@ -16,7 +16,7 @@ export default function SecutityPrivacyComo() {
               Security & privacy your way with the Trezor Suite app
             </h2>
           </div>
-          <div className=" flex items-center md:w-[30%]">
+          <div className=" flex items-center md:w-[30%] xl:w-[50%]">
             <Button>
               <Link href="#">Discover the app</Link>
             </Button>
@@ -28,11 +28,13 @@ export default function SecutityPrivacyComo() {
               {Alldata.securityPrivacy?.map((items, index) => (
                 <div key={index} className="">
                   <div className=" rounded-3xl bg-white p-5">
-                    <div className=" flex items-center gap-2">
+                    <div className=" flex items-center gap-2 mb-7">
                       <div className=" size-10 text-[#106148] bg-[#e5f3ed] p-2 rounded-full ">
                         {items.btn}
                       </div>
-                      <div className="text-xl text-black ">{items.name}</div>
+                      <div className="text-xl text-black xl:text-2xl ">
+                        {items.name}
+                      </div>
                     </div>
                     <div className="">
                       <div className="text-[#797979] mt-2">
@@ -43,15 +45,19 @@ export default function SecutityPrivacyComo() {
                 </div>
               ))}
             </div>
-            <div className=" flex justify-between md:grid md:gap-3 gap-2 h-36 md:h-auto w-full ">
-              <div className="rounded-lg mr-a row-span-2">
-                <Image src={security} alt="Security Image" className="" />
+            <div className="flex md:inline-block grid-row-3 gap-4 rounded-2xl">
+              <div className=" md:h-96 md:pb-3 xl:pb-0 row-span-2">
+                <Image
+                  src={security}
+                  alt="Security Image"
+                  className=" w-full h-full"
+                />
               </div>
-              <div className="rounded-3xl bg-[#0a4231] shadow-lg p-3  ">
-                <div className=" mt-3 flex justify-end">
+              <div className="bg-[#0a4231] rounded-xl p-2 lg:p-1 xl:p-0 xl:mt-2 xl:pt-1">
+                <div className=" mt-3 mr-3 flex justify-end">
                   <FeatureTrezorApp />
                 </div>
-                <h2 className=" text-white md:text-2xl text-lg  lg:text-4xl h-auto xs:mr-5 flex justify-end md:justify-start mt-4 ml-2 ">
+                <h2 className=" text-white md:text-2xl text-lg  lg:text-4xl h-auto xs:mr-5 flex justify-end md:justify-start mt-16 sm:mt-12 ml-2 xl:pb-3 xl:mt-5 ">
                   Explore all features
                 </h2>
               </div>
