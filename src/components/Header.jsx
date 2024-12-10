@@ -18,6 +18,7 @@ import Cart from "./Cart";
 function Header() {
   const [isCloseOpen, setIsCloseOpen] = useState(false);
   const toggle = () => setIsCloseOpen(!isCloseOpen);
+  const [isHover, setIsHover] = useState(false);
   const modalRef = useRef(null);
   const handleOutsideClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -48,8 +49,11 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className={` `}>
+    <div className={``}>
       {isCloseOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-0 z-40"></div>
+      )}
+      {isHover && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-40"></div>
       )}
       <div className="md:block hidden">
@@ -63,12 +67,12 @@ function Header() {
         </div>
       </div>
       <main
-        className={`flex h-14 md:h-16 gap-2 xl:px-40 md:px-4 px-2 w-full mt-0 fixed z-50 ${
+        className={`flex h-14 md:h-16 gap-2 xl:px-40 md:px-4 px-2 w-full mt-1 fixed z-50 ${
           scrolled ? "top-2" : "md:top-10"
         } `}
         ref={modalRef}
       >
-        <nav className=" lg:w-[83%] xl:w-[88%] 2xl:w-[85%] flex justify-between items-center rounded-full bg-white shadow-lg w-full px-5">
+        <nav className=" lg:w-[83%] xl:w-[88%] 2xl:w-[88%]  flex justify-between items-center rounded-full bg-white shadow-lg w-full px-5">
           {/* Logo */}
           <section className=" w-24 text-black">
             <Link href="/">
@@ -78,7 +82,12 @@ function Header() {
           <section className="">
             <div className="flex items-center md:gap-10 transition-all ">
               {Alldata?.header.map((items) => (
-                <div className=" relative hidden md:block " key={items.id}>
+                <div
+                  className="relative hidden md:block"
+                  key={items.id}
+                  onMouseEnter={() => setIsHover(items.id)}
+                  onMouseLeave={() => setIsHover(null)}
+                >
                   <section
                     className={`md:flex items-center justify-between gap-1 cursor-pointer group transition-all text-[#797979]`}
                   >
@@ -87,13 +96,17 @@ function Header() {
                     </div>
                     {items.arrow && (
                       <div>
-                        <div className="group-hover:text-[#3d3b3b] transition-all rotate-0 group-hover:rotate-180 hidden md:block">
+                        <div
+                          className={`group-hover:text-[#3d3b3b] transition-all rotate-0 group-hover:rotate-180 hidden md:block ${
+                            isHover === items.id ? "" : "hidden"
+                          }`}
+                        >
                           {items.arrow}
                         </div>
-                        <div className=" hidden group-hover:block">
-                          {items.subMenu}
-                        </div>
                       </div>
+                    )}
+                    {isHover === items.id && items.subMenu && (
+                      <div>{items.subMenu}</div>
                     )}
                   </section>
                 </div>
@@ -142,7 +155,6 @@ function Header() {
                 {isOpenSubNav["support"] ? <SupportHover /> : null}
               </div>
               <div className="py-2 border-b-2 border-gray-200 text-gray-500">
-                {/* <div>{<Country />}</div> */}
                 <div className="  py-4 flex items-center gap-1">
                   <span className=" rounded-full px-9 flex items-center justify-center size-7">
                     <Cart />
@@ -153,7 +165,6 @@ function Header() {
           </div>
           <div className="  hidden md:block">
             <div className="pl-2 flex items-center gap-1">
-              {/* <div>{<Country />}</div> */}
               <span>
                 <Cart />
               </span>

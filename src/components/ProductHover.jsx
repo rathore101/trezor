@@ -27,7 +27,7 @@ function ProductHover() {
     window.addEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="z-50 pb-5 md:fixed lg:px-24 lg:mt-28 md:mt-28 md:px-5 md:h-1 w-auto inset-0">
+    <div className=" container-sm mx-auto z-50 pb-5 md:fixed lg:px-24 lg:mt-28 md:mt-28 md:px-5 md:h-1 w-auto inset-0">
       <div
         className={` bg-transparent md:pt-10 md:-mt-7   ${
           scrolled ? "  pt-12 xl:-mt-16" : "top-0"
