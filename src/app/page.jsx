@@ -11,8 +11,8 @@ function Home() {
   return (
     <div className="">
       <Header />
-      <div className="container relative xl:px-16 xl:pt-36 xl:pb-20 pt-20 md:pt-16 md:px-4 px-2 lg:px-10 py-8 m-auto">
-        <div className=" fixed  flex justify-center items-center right-4 md:right-7 top-[90%] xl:right-16  z-50">
+      <div className=" relative xl:p-44 md:px-2 px-2 lg:px-10 py-8 ">
+        <div className=" fixed text-end flex justify-center items-center right-4 md:right-7 top-[90%] xl:right-16  z-50">
           <GoToTop />
         </div>
         <HeroSection1 />

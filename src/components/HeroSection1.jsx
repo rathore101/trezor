@@ -11,8 +11,8 @@ function HeroSection1() {
         <br />
         <span className="text-[#0f6148] ">with your new Trezor</span>
       </h2>
-      <p className="font-abc text-[#171717] xl:text-xl md:text-xl text-md py-3">
-        Download the Trezor Suite app and follow the steps to get started.
+      <p className="font-abc text-[#797979] xl:text-xl md:text-xl text-md py-3">
+        Manage your assets in one app.
       </p>
       <div className="my-2 flex">
         <div className="md:items-center md:flex md:flex-cols-3 md:gap-3  ">

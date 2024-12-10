@@ -56,6 +56,9 @@ function Header() {
       {isHover && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-40"></div>
       )}
+      {isHover && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-xl z-40"></div>
+      )}
       <div className="md:block hidden">
         <div className="bg-[#00854d] text-white flex justify-center items-center py-1">
           <h1>
@@ -82,12 +85,7 @@ function Header() {
           <section className="">
             <div className="flex items-center md:gap-10 transition-all ">
               {Alldata?.header.map((items) => (
-                <div
-                  className="relative hidden md:block"
-                  key={items.id}
-                  onMouseEnter={() => setIsHover(items.id)}
-                  onMouseLeave={() => setIsHover(null)}
-                >
+                <div className=" relative hidden md:block " key={items.id}>
                   <section
                     className={`md:flex items-center justify-between gap-1 cursor-pointer group transition-all text-[#797979]`}
                   >
@@ -102,6 +100,9 @@ function Header() {
                           }`}
                         >
                           {items.arrow}
+                        </div>
+                        <div className=" hidden group-hover:block">
+                          {items.subMenu}
                         </div>
                       </div>
                     )}
