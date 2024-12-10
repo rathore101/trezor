@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 function HeroSection1() {
   return (
     <div className="mb-12">
-      <h2 className=" 2xl:gap-4 sm:text-4xl xl:text-6xl font-bold text-3xl md:mt-20 lg:mt-24 py-2 mt-5 xl:mt-0 text-black ">
+      <h2 className=" 2xl:gap-4 sm:text-4xl xl:text-6xl font-bold text-3xl md:mt-20 lg:mt-24 py-2 mt-14 xl:mt-0 text-black ">
         Get started
         <br />
         <span className="text-[#0f6148] ">with your new Trezor</span>

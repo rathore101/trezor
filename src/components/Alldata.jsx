@@ -3,20 +3,6 @@ import RedditIcon from "@/assets/RedditIcon";
 import InstagramIcons from "@/assets/InstagranIcon";
 import FacebookIcons from "@/assets/FacebookIcon";
 import TiktokIcon from "@/assets/TiktokIcon";
-// import Image from "next/image";
-// import multipleWallets from "@/assets/img/multipleWallets.jpg";
-// import bossLevel from "@/assets/img/bossLevel.jpg";
-// import ethStaking from "@/assets/img/ethStaking.jpg";
-// import syncPhone from "@/assets/img/syncPhone.jpg";
-// import bestDeal from "@/assets/img/bestDeal.jpg";
-// import Export from "@/assets/Export";
-// import DarkMode from "@/assets/DarkMode";
-// import Tor from "@/assets/Tor";
-// import BitcoinIcon from "@/assets/BitcoinIcon";
-// import NativeSupport from "@/assets/NativeSupport";
-// import Passphrase from "@/assets/Passphrase";
-// import Taproot from "@/assets/Taproot";
-// import SignVerify from "@/assets/SignVerify";
 import WindowIcon from "@/assets/WindowIcon";
 import AppleIcomM from "@/assets/AppleIconM";
 import AppleIntel from "@/assets/AppleIntel";
@@ -28,29 +14,6 @@ import LearnBooks from "@/assets/LearnBooks";
 import Headset from "@/assets/Headset";
 import UserFour from "@/assets/UserFour";
 import NewsBlog from "@/assets/NewsBlog";
-// import Toproot from "@/assets/Taproot";
-// import TorNetwork from "@/assets/TorNetwork";
-// import CoinControl from "@/assets/CoinControl";
-// import Uniswap from "@/assets/img/Uniswap.png";
-// import Chainlink from "@/assets/img/Chainlink.png";
-// import OKB from "@/assets/img/OKB.png";
-// import Stellar from "@/assets/img/Stellar.png";
-// import Ethereum from "@/assets/img/Ethereum.png";
-// import Solana from "@/assets/img/Solana.png";
-// import Tether from "@/assets/img/Tether.png";
-// import BNB from "@/assets/img/BNB.png";
-// import USDCoin from "@/assets/img/USDCoin.png";
-// import XRP from "@/assets/img/XRP.png";
-// import Bitcoin from "@/assets/img/Bitcoin.png";
-// import Cardano from "@/assets/img/Cardano.png";
-// import Dogecoin from "@/assets/img/Dogecoin.png";
-// import Polygon from "@/assets/img/Polygon.png";
-// import BinanceUSD from "@/assets/img/BinanceUSD.png";
-// import ShibaInuimg from "@/assets/img/ShibaInuimg.png";
-// import Avalanche from "@/assets/img/Avalanche.png";
-// import Litecoin from "@/assets/img/Litecoin.png";
-// import Dai from "@/assets/img/Dai.png";
-// import WrappedBitcoin from "@/assets/img/WrappedBitcoin.png";
 import DownArrow from "@/assets/DownArrow";
 import ProductHover from "./ProductHover";
 import SupportHover from "./SupportHover";
@@ -58,7 +21,6 @@ import PlusIcon from "@/assets/PlusIcon";
 import MinusIcon from "@/assets/MinusIcon";
 import Youtube from "@/assets/Youtube";
 import Spotify from "@/assets/Spotify";
-import Link from "next/link";
 
 export const Alldata = {
   header: [
@@ -215,4 +177,3 @@ export const Alldata = {
     },
   ],
 };
-// to learn how to transfer your assets from an exchange to your Trezor.

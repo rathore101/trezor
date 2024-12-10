@@ -22,12 +22,12 @@ export default function HeroSection2() {
         <div className=" md:grid md:grid-cols-2 gap-3">
           {Alldata?.heroSectionData?.map((items, index) => (
             <div key={index} className="grid ">
-              <div className=" bg-[#f6f6f6] rounded-2xl p-5 m-1 md:m-0">
+              <div className=" bg-[#f6f6f6] rounded-2xl p-3 m-1 md:m-0">
                 <div className="flex row-span-1 gap-3 md:gap-5 my-0 md:my-5">
                   <div className=" bg-[#e2e2e2] rounded-full size-16 flex justify-center items-center text-black">
                     {items.number}
                   </div>
-                  <div className=" flex items-center text-2xl md:text-3xl  md:font-bold text-black ">
+                  <div className=" flex items-center text-lg font-bold md:text-2xl  md:font-bold text-black ">
                     {items.name}
                   </div>
                 </div>
